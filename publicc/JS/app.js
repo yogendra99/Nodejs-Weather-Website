@@ -1,4 +1,4 @@
-console.log('client side js file is loaded with checking git ggg')
+
 
 // fetch('http://puzzle.mead.io/puzzle').then((response) => {               //fetch pura baki hai
 //     response.json().then((data) => {
