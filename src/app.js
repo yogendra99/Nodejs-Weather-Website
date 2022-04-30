@@ -6,6 +6,8 @@ const forecast = require('./utils/forecast')
 
 const app = express()
 
+const port = process.env.PORT || 3000                           //setting port value 
+
 //Define path for express config
 const pub_Dir = path.join(__dirname, '../publicc')            //(__dirname = curr dir name and +../public) is publicc   
 const viewspath = path.join(__dirname, '../templetes/views')       //setting the path for dir accessing
@@ -116,9 +118,9 @@ app.get('*', (req, res) => {                                     //for generic 4
 
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Everything is all right')
-    console.log('Server is up on port 3000.')
+    console.log(`Server is up on port${port}.`)
 })
 
 
