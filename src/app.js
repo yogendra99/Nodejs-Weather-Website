@@ -31,7 +31,7 @@ app.get('', (req, res) => {                                  //route handler to 
  
 app.get('/about', (req, res) => {                             
     res.render('about', {
-        title: 'About Me. Using hbs & partials',
+        title: 'About Me.',
         name: 'Yogendra Kumar'
     })
 })
@@ -94,7 +94,7 @@ app.get('/products', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helptext: 'This is some helpful text. using  hbs & partials',
+        helptext: 'This is some helpful text.',
         name : 'Yogendra Kumar'
     })
 })
