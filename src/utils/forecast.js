@@ -8,10 +8,12 @@ const forecast = (latitude, longitude, callback) => {
          callback('Unable to connect to weather service!' , undefined)                //for os level error
      } else if (response.body.error) {
          callback('Unable to find location', undefined)                       //network connected but not able find the location
-     } else {
-    //   callback(undefined , response.body.current.weather_descriptions[0] + '. It is currently '+ response.body.current.temperature + ' degress/Fahrenheit out. It Feels Like ' + response.body.current.feelslike + ' degree/fahrenheit out')
-    //  }  
-     callback(undefined , response.body.current.weather_descriptions[0] + '. It is currently '+ response.body.current.temperature + ' Fahrenheit out. It Feels Like ' + response.body.current.feelslike + ' Fahrenheit out    . The Wind Speed is ' + response.body.current.wind_speed + ' mph and Humidity is ' + response.body.current.humidity + '%.' )
+     } else {  
+     callback(undefined , 'Currently Weather is ' + response.body.current.weather_descriptions[0] +
+        ' .It is currently ' + ((response.body.current.temperature  - 32) * 5 / 9).toFixed(0) +
+       ' celsius out. It Feels Like ' + ((response.body.current.feelslike  - 32) * 5 / 9).toFixed(0) + 
+       ' celsius out. The Wind Speed is ' + response.body.current.wind_speed + 
+       ' mph and Humidity is ' + response.body.current.humidity + '%.' )
      }  
     })                                                                     
 }

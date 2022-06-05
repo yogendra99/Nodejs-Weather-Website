@@ -69,12 +69,6 @@ app.get('/weather', (req, res) => {
 
     })
 
-
-    // res.send({
-    //     forecast: 'It is snowing',
-    //     location: 'Philadelphia',
-    //     address: req.query.address
-    // })
 })
 
 
@@ -94,7 +88,7 @@ app.get('/products', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helptext: 'This is some helpful text.',
+        helptext: 'In Case An Error. Please Contact Yogendrawork99@gmail.com',
         name : 'Yogendra Kumar'
     })
 })
@@ -115,8 +109,6 @@ app.get('*', (req, res) => {                                     //for generic 4
       })
 
 })
-
-
 
 app.listen(port, () => {
     console.log('Everything is all right')
